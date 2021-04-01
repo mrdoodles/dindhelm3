@@ -2,9 +2,15 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ develop ]
+    paths:
+      - 'Dockerfile'
+      - 'env.VARIABLES'
+      - '.github/workflows/docker-image.yaml'
   pull_request:
-    branches: [ develop ]
+    paths:
+      - 'Dockerfile'
+      - 'env.VARIABLES'
+      - '.github/workflows/docker-image.yaml'
 
 jobs:
 
